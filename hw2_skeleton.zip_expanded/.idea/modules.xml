@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/hw2_skeleton/hw2_skeleton.iml" filepath="$PROJECT_DIR$/hw2_skeleton/hw2_skeleton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hw2_skeleton.zip_expanded.iml" filepath="$PROJECT_DIR$/hw2_skeleton.zip_expanded.iml" />
+    </modules>
+  </component>
+</project>
