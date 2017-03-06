@@ -8,13 +8,12 @@ public class TallyNumber {
     private int num5;
     private int num1;
 
+    private String str5 ="*";
+    private String str1 = "|";
+
     public TallyNumber(int givenValue)
     {
         intRep = givenValue;
-        num5 = givenValue/5;
-        num1 = givenValue%5;
-        strRep = ('*' * num5)+ ('|' * num1);
-
 
     }
 
@@ -30,6 +29,7 @@ public class TallyNumber {
 
     public  int getIntValue()
     {
+
         return intRep;
     }
 
@@ -47,4 +47,8 @@ public class TallyNumber {
     {
 
     }
+
+    num5 = givenValue/5;
+    num1 = givenValue%5;
+    strRep = ("*" * num5)+ ("|" * num1);
 }

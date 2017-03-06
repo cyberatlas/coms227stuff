@@ -19,15 +19,13 @@
       <file leaf-file-name="TallyNumber.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mini1/TallyNumber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+            <state relative-caret-position="396">
+              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding>
-                <element signature="e#374#375#0" expanded="true" />
+                <element signature="e#332#333#0" expanded="true" />
+                <element signature="e#368#369#0" expanded="true" />
                 <element signature="e#410#411#0" expanded="true" />
-                <element signature="e#452#453#0" expanded="true" />
-                <element signature="e#481#482#0" expanded="true" />
-                <element signature="e#518#519#0" expanded="true" />
-                <element signature="e#547#548#0" expanded="true" />
+                <element signature="e#439#440#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -411,7 +409,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1038" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -427,7 +425,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973877" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973877" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -459,27 +457,23 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#374#375#0" expanded="true" />
+            <element signature="e#332#333#0" expanded="true" />
+            <element signature="e#368#369#0" expanded="true" />
             <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#452#453#0" expanded="true" />
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#518#519#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#439#440#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mini1/TallyNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        <state relative-caret-position="396">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
-            <element signature="e#374#375#0" expanded="true" />
+            <element signature="e#332#333#0" expanded="true" />
+            <element signature="e#368#369#0" expanded="true" />
             <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#452#453#0" expanded="true" />
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#518#519#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#439#440#0" expanded="true" />
           </folding>
         </state>
       </provider>
