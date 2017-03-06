@@ -2,23 +2,49 @@ package mini1;
 
 public class TallyNumber {
 
-	private int intRep;
-	private String strRep;
+    private int intRep;
+    private String strRep;
 
-	public TallyNumber(int givenValue){	
-		intRep = givenValue;
-	}
-	public TallyNumber(String givenString){
-		strRep = givenString;
-	}
+    private int num5;
+    private int num1;
 
-	public static String getStringValue(){}
+    public TallyNumber(int givenValue)
+    {
+        intRep = givenValue;
+        num5 = givenValue/5;
+        num1 = givenValue%5;
+        strRep = ('*' * num5)+ ('|' * num1);
 
-	public  static int getIntValue(){}
 
-	public static void add(TallyNumber other){}
+    }
 
-	public static void combine(TallyNumber other){}
+    public TallyNumber(String givenString)
+    {
+        strRep = givenString;
+    }
 
-	public void normalize(){}
+    public String getStringValue()
+    {
+        return strRep;
+    }
+
+    public  int getIntValue()
+    {
+        return intRep;
+    }
+
+    public static void add(TallyNumber other)
+    {
+
+    }
+
+    public static void combine(TallyNumber other)
+    {
+
+    }
+
+    public void normalize()
+    {
+
+    }
 }
