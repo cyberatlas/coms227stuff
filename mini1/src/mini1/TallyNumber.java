@@ -11,7 +11,7 @@ public class TallyNumber {
 	public TallyNumber(String givenString){
 		strRep = givenString;
 	}
-	
+
 	public static String getStringValue(){}
 
 	public  static int getIntValue(){}
