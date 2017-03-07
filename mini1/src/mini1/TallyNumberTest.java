@@ -7,8 +7,10 @@ public class TallyNumberTest {
     public static void main(String[] args){
 
         TallyNumber t =  new TallyNumber("*************");
-        System.out.print(t.getIntValue());
-        System.out.print(t.getStringValue());
-
+        System.out.println(t.getIntValue());
+        System.out.println(t.getStringValue());
+        TallyNumber t2 = new TallyNumber("*|");
+        System.out.println(t2.getStringValue());
+        System.out.println(t2.getIntValue());
     }
 }

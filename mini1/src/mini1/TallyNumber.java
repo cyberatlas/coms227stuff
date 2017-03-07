@@ -24,17 +24,31 @@ public class TallyNumber {
 
 
     public TallyNumber(String givenString) {
-        strRep = givenString;
-        countSpaces();
+
+        strRep = (givenString);
         int sum =0;
+        countSpaces();
         for (int i = 0; i < strRep.length(); i++) {
             if (strRep.charAt(i) == '|') {
-                sum += 1;
+                //intRep += 1;
+                sum +=1;
             } else if (strRep.charAt(i) == '*') {
-                sum += 5;
+                //intRep += 5;
+                sum+=5;
+            } else if (strRep.charAt(i) == ' ') {
+                intRep += sum * (int) Math.pow(10, numSpace);
             }
-            //else if (strRep.charAt(i) == ' '){}
+            else if (strRep.charAt(i) =='0'){
+                sum += 0;
+            }
+
+            else if ((strRep.charAt(i) != '|') &&  (strRep.charAt(i) != '*' )&& (strRep.charAt(i) != ' ')){
+                intRep =-1;
+                strRep = "-1";
+                break;
+            }
         }
+        intRep += sum;
 
     }
 
