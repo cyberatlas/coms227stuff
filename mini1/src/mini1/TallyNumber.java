@@ -77,12 +77,13 @@ public class TallyNumber {
     private static String repeat(String str, int times){
         return new String(new char[times]).replace("\0", str);
     }
-    private void countSpaces(){
+    private int countSpaces(){
         for (int i =0; i <strRep.length(); i++) {
             if (strRep.charAt(i) == ' '){
                 numSpace +=1;
             }
         }
+        return numSpace;
     }
 }
 
