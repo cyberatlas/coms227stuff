@@ -49,7 +49,8 @@ public class TallyNumber {
                 break;
             }
         }
-        intRep += sum;
+        intRep = (strRep == "") ? -1: intRep + sum ;
+        
 
     }
 
