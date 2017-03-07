@@ -19,18 +19,22 @@ public class TallyNumber {
         intRep = givenValue;
         num5 = givenValue / 5;
         num1 = givenValue % 5;
-        strRep = repeat(str5, num5) + repeat(str1, num1);
+        //strRep = str5.repeat(num5) + str1.repeat(num1);
+        strRep = repeat("*", num5) + repeat("|", num1);
     }
 
 
     public TallyNumber(String givenString) {
         strRep = givenString;
         int len = strRep.length(); //Find the length of the string so we can iterate through a loop and count the characters in it
-
-
-        for (int i =0; i < len; i++){
-
+        for (int i = 0; i < strRep.length(); i++) {
+            if (strRep.charAt(i) == '|') {
+                intRep += 1;
+            } else if (strRep.charAt(i) == '*') {
+                intRep += 5;
+            }
         }
+
     }
 
     public String getStringValue() {
@@ -51,6 +55,10 @@ public class TallyNumber {
 
     public void normalize() {
 
+    }
+    //found this method, allows me to make a string that has a character repeated, some number of times
+    public static String repeat(String str, int times){
+        return new String(new char[times]).replace("\0", str);
     }
 }
 
