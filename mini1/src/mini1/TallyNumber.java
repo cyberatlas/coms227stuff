@@ -12,8 +12,7 @@ public class TallyNumber {
     private int num5;
     private int num1;
 
-    private String str5 = "*";
-    private String str1 = "|";
+    private int numSpace;
 
     public TallyNumber(int givenValue) {
         intRep = givenValue;
@@ -26,13 +25,15 @@ public class TallyNumber {
 
     public TallyNumber(String givenString) {
         strRep = givenString;
-        int len = strRep.length(); //Find the length of the string so we can iterate through a loop and count the characters in it
+        countSpaces();
+        int sum =0;
         for (int i = 0; i < strRep.length(); i++) {
             if (strRep.charAt(i) == '|') {
-                intRep += 1;
+                sum += 1;
             } else if (strRep.charAt(i) == '*') {
-                intRep += 5;
+                sum += 5;
             }
+            //else if (strRep.charAt(i) == ' '){}
         }
 
     }
@@ -59,6 +60,13 @@ public class TallyNumber {
     //found this method, allows me to make a string that has a character repeated, some number of times
     public static String repeat(String str, int times){
         return new String(new char[times]).replace("\0", str);
+    }
+    private void countSpaces(){
+        for (int i =0; i <strRep.length(); i++) {
+            if (strRep.charAt(i) == ' '){
+                numSpace +=1;
+            }
+        }
     }
 }
 
