@@ -1,6 +1,5 @@
 package mini1;
 
-import com.sun.deploy.util.StringUtils;
 
 public class TallyNumber {
 
@@ -14,7 +13,7 @@ public class TallyNumber {
 
     private int numSpace;
 
-    public TallyNumber(int givenValue) {
+    public TallyNumber(int givenValue) {git 
         intRep = givenValue;
         num5 = givenValue / 5;
         num1 = givenValue % 5;
@@ -44,7 +43,8 @@ public class TallyNumber {
 
             else if ((strRep.charAt(i) != '|') &&  (strRep.charAt(i) != '*' )&& (strRep.charAt(i) != ' ')){
                 intRep =-1;
-                strRep = "-1";
+                strRep = "";
+                sum = 0;
                 break;
             }
         }
@@ -60,11 +60,11 @@ public class TallyNumber {
         return intRep;
     }
 
-    public static void add(TallyNumber other) {
+    public void add(TallyNumber other) {
 
     }
 
-    public static void combine(TallyNumber other) {
+    public void combine(TallyNumber other) {
 
     }
 
@@ -72,7 +72,7 @@ public class TallyNumber {
 
     }
     //found this method, allows me to make a string that has a character repeated, some number of times
-    public static String repeat(String str, int times){
+    private static String repeat(String str, int times){
         return new String(new char[times]).replace("\0", str);
     }
     private void countSpaces(){
