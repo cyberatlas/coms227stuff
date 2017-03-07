@@ -13,12 +13,12 @@ public class TallyNumber {
 
     private int numSpace;
 
-    public TallyNumber(int givenValue) {git 
+    public TallyNumber(int givenValue) {
         intRep = givenValue;
         num5 = givenValue / 5;
         num1 = givenValue % 5;
         //strRep = str5.repeat(num5) + str1.repeat(num1);
-        strRep = repeat("*", num5) + repeat("|", num1);
+        strRep = (intRep !=0) ? repeat("*", num5) + repeat("|", num1) : "0";
     }
 
 
@@ -36,6 +36,7 @@ public class TallyNumber {
                 sum+=5;
             } else if (strRep.charAt(i) == ' ') {
                 intRep += sum * (int) Math.pow(10, numSpace);
+                numSpace -=1;
             }
             else if (strRep.charAt(i) =='0'){
                 sum += 0;
