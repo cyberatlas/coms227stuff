@@ -25,7 +25,13 @@ public class TallyNumber {
     public TallyNumber(String givenString) {
 
         strRep = (givenString);
-        int sum =0;
+        convertToInt(strRep);
+        
+
+    }
+    
+    private int convertToInt(String strRep){
+    	int sum =0;
         countSpaces();
         for (int i = 0; i < strRep.length(); i++) {
             if (strRep.charAt(i) == '|') {
@@ -37,6 +43,7 @@ public class TallyNumber {
             } else if (strRep.charAt(i) == ' ') {
                 intRep += sum * (int) Math.pow(10, numSpace);
                 numSpace -=1;
+                sum = 0;
             }
             else if (strRep.charAt(i) =='0'){
                 sum += 0;
@@ -50,8 +57,7 @@ public class TallyNumber {
             }
         }
         intRep = (strRep == "") ? -1: intRep + sum ;
-        
-
+        return intRep;
     }
 
     public String getStringValue() {
@@ -71,7 +77,8 @@ public class TallyNumber {
     }
 
     public void normalize() {
-
+    	String r;
+    	
     }
     //found this method, allows me to make a string that has a character repeated, some number of times
     private static String repeat(String str, int times){
