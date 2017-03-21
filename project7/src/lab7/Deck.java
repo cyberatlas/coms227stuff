@@ -1,6 +1,5 @@
 package lab7;
 import java.util.Random;
-
 import lab7.Card.Suit;
 
 /**
@@ -44,7 +43,17 @@ public class Deck
   public Card[] select(int k)
   {
     // TODO
-    return null;
+	//Deck deck = new Deck();
+	init();
+	Card[] cardz = new Card[k];
+	Random rand = new Random();
+    
+    for (int i =0; i< k;i++){
+    	cardz [i] = cards[rand.nextInt(52-i)];
+    	swap(cards,i,(51-i));
+    	
+    }
+    return cardz;
   }
   
   /**
@@ -67,4 +76,10 @@ public class Deck
     }
 
   }
+  private static void swap(Card[] arr, int i, int j)
+	{
+		Card temp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = temp;
+	}
 }

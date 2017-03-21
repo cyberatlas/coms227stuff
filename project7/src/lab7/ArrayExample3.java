@@ -11,6 +11,8 @@ public class ArrayExample3
 		String s = "3 5 7 9 12";
 		int[] result = readNumbers(s);
 		System.out.println(Arrays.toString(result));
+		int[] arr = {-1,5,2};
+		System.out.println(Arrays.toString(randomExperiment(10,10)));
 	}
 
 	public static int[] readNumbers(String text)
@@ -44,8 +46,8 @@ public class ArrayExample3
 
 		int[] newArray = new int[count];
 		int i= 0;
-		for(int j =0; j<count; j++) {
-			if (j > 0) {
+		for(int j =0; j<numbers.length; j++) {
+			if (numbers[j] > 0) {
 				newArray[i] = numbers[j];
 				i++;
 			}
@@ -56,9 +58,8 @@ public class ArrayExample3
 		Random rand = new Random();
 		int[] counts = new int[max];
 		for (int i=0; i <iters; i++){
-			for(int j=0; j<max; j++){
-				counts[i] += rand.nextInt(max);
-			}
+			counts[rand.nextInt(max)] += 1;
+			
 		}
 
 		return counts;
