@@ -2,13 +2,12 @@ package notes;
 
 public class recursion {
 
-	private static void countUp(int n){
-		if (n==1){
-			System.out.println(1);
+	public static int fibo(int n){
+		if(n==1 ||n==2){
+			return 1;
 		}
-		else {
-			countUp(n-1);
-			System.out.println(n);
-		}
+		else{
+			return fibo(n-1) +fibo(n-2);
+			}
 	}
 }
