@@ -1,0 +1,8 @@
+# draws a red square
+red 100 100 200 100 200 200 100 200 100 100
+
+# draws a blue triangle with line width of 2 pixels
+2 blue 250 100 400 350 100 350 250 100
+
+# draws a green zig-zag with a 6-pixel line
+6 green 100 400 200 450 300 400 400 450
