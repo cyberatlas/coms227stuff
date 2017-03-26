@@ -76,18 +76,19 @@ public class GameMain
     FlowGame game;
 
     // a simple game
+
     Flow[] flows = new Flow[3];
     flows[0] = new Flow(new Cell(0, 0, 'G'), new Cell(1, 2, 'G'));
     flows[1] = new Flow(new Cell(0, 1, 'R'), new Cell(0, 3, 'R'));
     flows[2] = new Flow(new Cell(2, 0, 'B'), new Cell(1, 3, 'B'));
     game = new FlowGame(flows, 4, 3);
-    
-//      Flow[] flows = new Flow[4];
-//      flows[0] = new Flow(new Cell(1, 1, 'O'), new Cell(2, 3, 'O'));
-//      flows[1] = new Flow(new Cell(1, 2, 'R'), new Cell(2, 4, 'R'));
-//      flows[2] = new Flow(new Cell(1, 4, 'G'), new Cell(2, 1, 'G'));
-//      flows[3] = new Flow(new Cell(2, 0, 'B'), new Cell(4, 0, 'B'));
-//      game = new FlowGame(flows, 6, 5);
+    /*
+     Flow[] flows = new Flow[4];
+      flows[0] = new Flow(new Cell(1, 1, 'O'), new Cell(2, 3, 'O'));
+     flows[1] = new Flow(new Cell(1, 2, 'R'), new Cell(2, 4, 'R'));
+     flows[2] = new Flow(new Cell(1, 4, 'G'), new Cell(2, 1, 'G'));
+      flows[3] = new Flow(new Cell(2, 0, 'B'), new Cell(4, 0, 'B'));
+      game = new FlowGame(flows, 6, 5);*/
 
     // calls the constructor based on string descriptors
 //    game = new FlowGame(testgrid);

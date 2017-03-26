@@ -2,6 +2,7 @@ package hw3;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import api.Flow;
 
@@ -28,6 +29,19 @@ public class Util
   public static Flow[] createFlowsFromStringArray(String[] descriptor)
   {
     // TODO
+    Scanner scanString = Scanner(String[] descriptor);//scans in given string array so that we can iterate through it
+    int row=0;//holds the row that is currently being looked at, used when creating the flow
+    while scanString.hasNextLine(){
+
+      String tempStr = scanString.nextLine();
+      for(int col = 0; col<tempStr.length(); col ++){
+        if(tempStr.charAt(col)!='-'){
+          //TODO Create a new flow with the endpoint of the character there and the location of row, col
+          
+        }
+
+      }
+  }
     return null;
   }
  
