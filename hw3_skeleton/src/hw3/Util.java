@@ -70,9 +70,20 @@ public class Util {
 	public static ArrayList<FlowGame> readFile(String filename) throws FileNotFoundException {
 		// TODO
 		Scanner scanArrayList = new Scanner(filename);
+		ArrayList<FlowGame> flowGames = new ArrayList<>();
+		//ArrayList<String> stringsIngames
+		while(scanArrayList.hasNext()){
 
-		return null;
+
+
+		}
+		/*for (int i = 0; ().size();i++){
+			if (readFile().g.charAt(0) == ' '){
+
+			}
+		}*/
+
+		return flowGames;
 	}
-	public static int 
 
 }
