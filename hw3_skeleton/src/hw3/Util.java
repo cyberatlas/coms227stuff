@@ -2,6 +2,7 @@ package hw3;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 import api.Cell;
@@ -27,14 +28,14 @@ public class Util {
 	 */
 	public static Flow[] createFlowsFromStringArray(String[] descriptor) {
 
-		ArrayList<Cell> strCell = new ArrayList<Cell>();
-		int row = 0;//holds the row that is currently being looked at, used when creating the flow
-		for ( row = 0; row<descriptor.length; row++){
+		ArrayList<Cell> strCell = new ArrayList<Cell>(0);
+		//int row = 0;//holds the row that is currently being looked at, used when creating the flow
+		for ( int rows = 0; rows<descriptor.length; rows++){
 
-			for (int col = 0; col <descriptor[row].length(); col++) {
-				if (descriptor[row].charAt(col) != '-') {
+			for (int cols = 0; cols <descriptor[rows].length(); cols++) {
+				if (descriptor[rows].charAt(cols) != '-') {
 
-					strCell.add(new Cell((row), col, descriptor[row].charAt(col)));
+					strCell.add(new Cell(rows, cols, descriptor[rows].charAt(cols)));
 
 				}
 
@@ -42,12 +43,13 @@ public class Util {
 		}
 		Flow[] flows = new Flow[strCell.size() /2];
 		for (int i=0; i<flows.length; i++){
-			for (int j=0;j<strCell.size();j++){
+			for (int j=1;j<strCell.size();j++){
 				if (strCell.get(0).colorMatches(strCell.get(j).getColor()))
 				{
 					flows[i]=new Flow(strCell.get(0),strCell.get(j));
 					strCell.remove(j);
 					strCell.remove(0);
+					break;
 				}
 			}
 		}
@@ -67,7 +69,10 @@ public class Util {
 	 */
 	public static ArrayList<FlowGame> readFile(String filename) throws FileNotFoundException {
 		// TODO
+		Scanner scanArrayList = new Scanner(filename);
+
 		return null;
 	}
+	public static int 
 
 }

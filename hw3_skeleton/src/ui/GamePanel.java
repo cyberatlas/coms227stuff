@@ -192,7 +192,7 @@ public class GamePanel extends JPanel
    * @param g the Swing graphics context
    * @param row y-coordinate of the cell to render
    * @param col x-coordinate of the cell to render
-   * @param t the icon to render, normally used
+   * @param color the icon to render, normally used
    *   to determine the color with which to render the cell
    */
   private void paintOneCircle(Graphics g, int row, int col, Color color)

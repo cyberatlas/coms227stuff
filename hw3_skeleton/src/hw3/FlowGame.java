@@ -4,6 +4,8 @@ import api.Cell;
 import api.Flow;
 import com.sun.xml.internal.bind.v2.TODO;
 
+import static hw3.Util.createFlowsFromStringArray;
+
 /**
  * Game state for a Flow Free game.
  */
@@ -39,6 +41,13 @@ public class FlowGame {
 	 */
 	public FlowGame(String[] descriptor) {
 		// TODO
+		flows = Util.createFlowsFromStringArray(descriptor);
+		width = descriptor[0].length();
+		height = descriptor.length;
+
+
+		currentCell = null;
+		currentFlow = null;
 	}
 
 	/**
