@@ -40,7 +40,7 @@ public class FlowGame {
 	 * @param descriptor array of strings representing initial endpoint positions
 	 */
 	public FlowGame(String[] descriptor) {
-		// TODO
+		//
 		flows = Util.createFlowsFromStringArray(descriptor);
 		width = descriptor[0].length();
 		height = descriptor.length;
