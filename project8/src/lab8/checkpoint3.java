@@ -8,26 +8,26 @@ import java.util.Scanner;
 import plotter.Plotter;
 import plotter.Polyline;
 
-public class CheckPoint3
+public class checkpoint3
 {
     public static void main(String[] args) throws FileNotFoundException
     {
-        String filename = "U:\\cs227\\workspace\\project8\\src\\lab8\\hello.txt";
+        String filename = "..\\project8\\hello.txt";
         readFile(filename);
     }
 
     public static ArrayList<Polyline> readFile(String filename) throws FileNotFoundException
     {
-        Plotter plotter = new Plotter();
+        Plotter plotter = new Plotter();//create a new plotter
         File file = new File(filename);
-        Scanner scan2 = new Scanner(file);
-        ArrayList<Polyline> p2 = new ArrayList<Polyline>();
+        Scanner scan2 = new Scanner(file);//read in and scan through a file
+        ArrayList<Polyline> p2 = new ArrayList<Polyline>();//makes a new arraylist of polylines
         String line = scan2.nextLine();
         line = scan2.nextLine();
         while(scan2.hasNextLine())
         {
             line = scan2.nextLine();
-            p2.add(parseOneLine(line));
+            p2.add(parseOneLine(line));//adds one polyline object at a time to be plotted to the arraylist
             plotter.plot(parseOneLine(line));
         }
         scan2.close();
@@ -38,18 +38,19 @@ public class CheckPoint3
     {
         Scanner temp = new Scanner(oneLine);
         int width;
-        if(temp.hasNextInt()) {width = temp.nextInt();}
-        else width = 1;
+        if(temp.hasNextInt()) {width = temp.nextInt();}//if the scanner has another number then with is that number
+        else width = 1;//otherwise the width is one
         String color = temp.next();
-        Polyline p1 = new Polyline(color, width);
+        Polyline p1 = new Polyline(color, width);//makes a new polyline given the width and color
         while(temp.hasNextInt())
         {
+        	//goes through and every 2 numbers is a new cordinate that is plotted
             int x = temp.nextInt();
             int y = temp.nextInt();
             p1.addPoint(new Point(x, y));
         }
         temp.close();
-        return p1;
+        return p1; //returns the new object
     }
 }
 

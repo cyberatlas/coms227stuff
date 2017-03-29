@@ -11,6 +11,7 @@ public class checkpoint2
         list.add("Hi");
         list.add("Hi");
         list.add("Hello");
+        //loops through the string list printing the words in it
         for(String word: list)
         {
             System.out.println(word);
@@ -23,6 +24,7 @@ public class checkpoint2
     }
     public static void removeDuplicates(ArrayList<String> words)
     {
+    	//adds all the words from the arraylist into a new array list only if they have not been used yet
         ArrayList<String> listCopy = new ArrayList<String>();
 		/*for(int i = 0; i < words.size(); ++i)
 		{
@@ -40,6 +42,7 @@ public class checkpoint2
             }
         }
         words.clear();
+        //copies the new array into the old one
         words.addAll(listCopy);
     }
 }
