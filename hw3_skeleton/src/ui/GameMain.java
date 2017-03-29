@@ -58,30 +58,30 @@ public class GameMain
   private static void create()
   {
     // sample descriptors
-    String[] testgrid = {
-      "GR-R",
-      "--GB",
-      "B---"
-    };
+//    String[] testgrid = {
+//      "GR-R",
+//      "--GB",
+//      "B---"
+//    };
 //    
-    /*String[] testgrid2 = {
-      "------",
-      "-OR-G-",
-      "BG-OR-",
-      "------",
-      "B-----",
-    };*/
+//    String[] testgrid2 = {
+//      "------",
+//      "-OR-G-",
+//      "BG-OR-",
+//      "------",
+//      "B-----",
+//    };
 
     // EDIT HERE TO CHANGE THE GAME BEING CREATED
     FlowGame game;
 
     // a simple game
-/*
+
     Flow[] flows = new Flow[3];
     flows[0] = new Flow(new Cell(0, 0, 'G'), new Cell(1, 2, 'G'));
     flows[1] = new Flow(new Cell(0, 1, 'R'), new Cell(0, 3, 'R'));
     flows[2] = new Flow(new Cell(2, 0, 'B'), new Cell(1, 3, 'B'));
-    game = new FlowGame(flows, 4, 3);*/
+    game = new FlowGame(flows, 4, 3);
     /*
      Flow[] flows = new Flow[4];
       flows[0] = new Flow(new Cell(1, 1, 'O'), new Cell(2, 3, 'O'));
@@ -91,8 +91,8 @@ public class GameMain
       game = new FlowGame(flows, 6, 5);*/
 
     // calls the constructor based on string descriptors
-    game = new FlowGame(testgrid);
-   // game = new FlowGame(testgrid2);
+//    game = new FlowGame(testgrid);
+//    game = new FlowGame(testgrid2);
 
       // create the three UI panels
       ScorePanel scorePanel = new ScorePanel();

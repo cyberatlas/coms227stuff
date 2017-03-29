@@ -1,5 +1,6 @@
 package hw3;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -68,36 +69,25 @@ public class Util {
 	 * @return list of FlowGame objects created from the valid descriptors in the file
 	 * @throws FileNotFoundException
 	 */
+
 	public static ArrayList<FlowGame> readFile(String filename) throws FileNotFoundException {
-		// TODO
-		Scanner scanArrayList = new Scanner(filename);
-		ArrayList<FlowGame> flowGames = new ArrayList<>();
-		//String[] tempArray;
-		//ArrayList<String> stringsIngames
-		int i=0;
-		ArrayList<String> tempArrayList = new ArrayList<>();
-		while(scanArrayList.hasNextLine()){
-			String tempLine = scanArrayList.nextLine();
-
-			tempArrayList.add(tempLine);
-				for (int j = 0; j <;)
-			if (tempLine.equals("")){
-				tempArrayList
-			}/*
-			columnCount = tempLine.length();
-			tempArray.add(tempLine);
-*/
-
-
-
-		}
-		/*for (int i = 0; ().size();i++){
-			if (readFile().g.charAt(0) == ' '){
-
-			}
-		}*/
-
-		return flowGames;
+		File file =  new File(filename);//reads in the filename and save it in the file object file
+		Scanner r = new Scanner(file);
+		ArrayList<FlowGame> games = new ArrayList<>();//create an ArrayList to hold the games
+//        while(r.hasNext())
+//        {
+		String s;
+		ArrayList<String> board = new ArrayList<>(0);
+		while(!(s = r.next()).trim().isEmpty() && r.hasNext())
+			board.add(s);
+		String[] b = new String[board.size()];
+		for(int i=0;i<board.size();i++)
+			b[i] = board.get(i);
+		for(int i=0;i<b.length;i++)
+			System.out.println(b[i]);
+		games.add(new FlowGame(b));
+//        }
+		return games;
 	}
 
 }

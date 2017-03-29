@@ -37,6 +37,7 @@ public class Flow
     endpoints[0] = endpoint0;
     endpoints[1] = endpoint1;
     cells = new ArrayList<Cell>();
+    System.out.println(endpoint0.toString());
   }
   
   /**
