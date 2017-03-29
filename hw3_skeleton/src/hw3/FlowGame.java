@@ -123,11 +123,11 @@ public class FlowGame {
 	 * @param col given column
 	 */
 	public void startFlow(int row, int col) {
-		for(Flow f: flows)
+		for(Flow f: flows)//iterates through the array of flows
 		{
-			for(int i=0;i<=1;i++)
+			for(int i=0;i<=1;i++)//each flow will have a value of 0 or 1 because they are endpoints, this is checking to see if the endpoints of the flows are in the column pressed
 			{
-				if (f.getEndpoint(i).getRow() == row && f.getEndpoint(i).getCol() == col)
+				if (f.getEndpoint(i).getRow() == row && f.getEndpoint(i).getCol() == col)//do the row and columns of the endpoints match the currently selected cell?
 				{
 					currentCell = f.getEndpoint(i);
 					currentFlow = f;

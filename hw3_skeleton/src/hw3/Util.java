@@ -1,6 +1,7 @@
 package hw3;
 
 import java.io.FileNotFoundException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -71,8 +72,21 @@ public class Util {
 		// TODO
 		Scanner scanArrayList = new Scanner(filename);
 		ArrayList<FlowGame> flowGames = new ArrayList<>();
+		//String[] tempArray;
 		//ArrayList<String> stringsIngames
-		while(scanArrayList.hasNext()){
+		int i=0;
+		ArrayList<String> tempArrayList = new ArrayList<>();
+		while(scanArrayList.hasNextLine()){
+			String tempLine = scanArrayList.nextLine();
+
+			tempArrayList.add(tempLine);
+				for (int j = 0; j <;)
+			if (tempLine.equals("")){
+				tempArrayList
+			}/*
+			columnCount = tempLine.length();
+			tempArray.add(tempLine);
+*/
 
 
 
