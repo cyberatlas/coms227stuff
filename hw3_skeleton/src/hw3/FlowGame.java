@@ -2,20 +2,27 @@ package hw3;
 
 import api.Cell;
 import api.Flow;
-import com.sun.xml.internal.bind.v2.TODO;
+//import com.sun.xml.internal.bind.v2.TODO;
 
 import static hw3.Util.createFlowsFromStringArray;
 
 /**
  * Game state for a Flow Free game.
+ * @author Alex Stevenson
  */
 public class FlowGame {
-
+	//Holds an array of all the flows
 	private Flow[] flows;
+	//holds the width of the board
 	private int width;
+	//holds the height of the board
 	private int height;
+	//holds the currentCell that is being used
 	private Cell currentCell;
+	//Flow to hold the current flow that is being worked on
 	private Flow currentFlow;
+	//holds the nuber of cells being occupied
+	private int total;
 	/**
 	 * Constructs a FlowGame to use the given array of Flows and
 	 * the given width and height.  Client is responsible for ensuring that all
@@ -32,15 +39,17 @@ public class FlowGame {
 		height = givenHeight;
 		currentCell = null;
 		currentFlow = null;
+		//initially twice the length of the flows  because there are 2 endpoints
+		total = flows.length*2;
 	}
 
 	/**
-	 * Constructs a FlowGame from the given descriptor.
+	 * Constructs a FlowGame from the given descriptor
 	 *
 	 * @param descriptor array of strings representing initial endpoint positions
 	 */
 	public FlowGame(String[] descriptor) {
-		//
+		//sets the flow array to the array of flows that is created by the createFlowsFromStringArray using the string that is passed in as the argument.
 		flows = Util.createFlowsFromStringArray(descriptor);
 		width = descriptor[0].length();
 		height = descriptor.length;
@@ -90,21 +99,27 @@ public class FlowGame {
 	/**
 	 * Returns the number of occupied cells in all flows (including endpoints).
 	 *
-	 * @return occupied cells in this game
+	 * @return the occupied number cells in this game
 	 */
 	public int getCount() {
-		// TODO
-		return 0;
+		//everytime a cell is added the number is increased by 1
+		return total;
 	}
 
 	/**
+	 * Loops through the array flows and checks to see if each index of the array is occupied
 	 * Returns true if all flows are complete and all cells are occupied.
 	 *
 	 * @return true if all flows are complete and all cells are occupied
 	 */
 	public boolean isComplete() {
-		// TODO
-		return false;
+
+		for(int i = 0; i<flows.length; i++){
+			if (!(flows[i].isComplete() == true)){
+				return false;
+			}
+		}
+		return true;
 	}
 
 	/**
@@ -123,16 +138,20 @@ public class FlowGame {
 	 * @param col given column
 	 */
 	public void startFlow(int row, int col) {
-		for(Flow f: flows)//iterates through the array of flows
+		//iterates through the array of flows
+		for(Flow f: flows)
 		{
-			for(int i=0;i<=1;i++)//each flow will have a value of 0 or 1 because they are endpoints, this is checking to see if the endpoints of the flows are in the column pressed
+			//each flow will have a value of 0 or 1 because they are endpoints, this is checking to see if the endpoints of the flows are in the column pressed
+			for(int i=0;i<=1;i++)
 			{
-				if (f.getEndpoint(i).getRow() == row && f.getEndpoint(i).getCol() == col)//do the row and columns of the endpoints match the currently selected cell?
+				//do the row and columns of the endpoints match the currently selected cell?
+				if (f.getEndpoint(i).getRow() == row && f.getEndpoint(i).getCol() == col)
 				{
 					currentCell = f.getEndpoint(i);
 					currentFlow = f;
 					currentFlow.clear();
-					currentFlow.add(currentCell);//adds the current the cell when you start the flow
+					//adds the current the cell when you start the flow
+					currentFlow.add(currentCell);
 				}
 			}
 		}
@@ -166,12 +185,15 @@ public class FlowGame {
 	 * @param col given column for the new cell
 	 */
 	public void addCell(int row, int col) {
+		//if the current cell is empty
 		if(currentCell != null && isAdjacent(row, col) && !isOccupied(row, col))
 		{
 			Cell c = new Cell(row, col, currentFlow.getColor());
 			currentFlow.add(c);
+			//if the current flow is complete then dont add any more cells otherwise add a cell
 			currentCell = (currentFlow.isComplete()) ? null : c;
 		}
+		total ++;
 	}
 
 	/**
@@ -187,30 +209,43 @@ public class FlowGame {
 		{
 			for(int j=0; j<flows[i].getCells().size(); j++)
 			{
+				//if the cell is in a flow or is an endpoint return true
 				if ((flows[i].getCells().get(j).getRow() == row && flows[i].getCells().get(j).getCol() == col) || isEndpoint(row, col)) {
 					//if (flows[i].getCells().get(j) == 1)||(flows[i].getCells().get(j) == 0) {
 						return true;
-					//}
+
 				}
 			}
 		}
 		return false;
 	}
 
+	/***
+	 * Loops through the array of flows, checking to see if the endpoint of each matches the row and column and if the color matches. Cehcks to see if the color matches so that you cannot travel through an existing point
+	 * @param row
+	 * @param col
+	 * @return false fi the endpoints do not match or the color does not match
+	 */
 	private boolean isEndpoint(int row, int col)
 	{
 		for(Flow f: flows)
 		{
 			for(int i=0;i<=1;i++)
 			{
-				//TODO find a different way to implement the second part of the if statement
-				if((f.getEndpoint(i).getRow() == row && f.getEndpoint(i).getCol() == col) && !f.getEndpoint(i).colorMatches(currentFlow.getColor())) return true; //cant pass through the endpoint that matches the color
+				//check to see if the row and column of the endpoint stored in that index of the flow array match the current row and column
+				if((f.getEndpoint(i).getRow() == row && f.getEndpoint(i).getCol() == col) && !f.getEndpoint(i).colorMatches(currentFlow.getColor())){
+					//cant pass through the endpoint that matches the color
+					return true;}
 			}
 		}
 		return false;
 	}
+
 	/**
-	 * Checks to make sure that the cell we are trying to add is directly above or below the current cell
+	 * Checks to see if either the row or the column is 1 away from the current cell. It can only be one or the other. If both are away then it is diagnal and does not work
+	 * @param row
+	 * @param col
+	 * @return false if it is not one to the left or right or one above or below
 	 */
 	private boolean isAdjacent(int row, int col){
 		if  (((Math.abs(row - currentCell.getRow())==1) && col == currentCell.getCol()) || (Math.abs(col- currentCell.getCol()) ==1)&&(row == currentCell.getRow())){
