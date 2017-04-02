@@ -1,8 +1,9 @@
 package notes;
+/*
 
 /**
  * Created by Ruski on 3/29/2017.
- */
+ *//*
 public class SelectionSort {
     public static void sort(int[] v){
         for (int i =0; i <v.length; ++i){
@@ -14,3 +15,4 @@ public class SelectionSort {
 
 public  static String mostValuable ()
 }
+*/
