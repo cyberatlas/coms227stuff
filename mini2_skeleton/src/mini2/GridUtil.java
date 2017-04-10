@@ -2,6 +2,8 @@ package mini2;
 
 import api.ITransform;
 
+import java.lang.reflect.Array;
+
 /**
  * Utility class for applying transformations to 2d arrays.
  * A transformation computes a new value for a cell that is
@@ -101,6 +103,27 @@ public class GridUtil
   public static int[][] getSubArray(int[][] arr, int centerRow, int centerCol, int radius, boolean wrapped)
   {
     // TODO
-    return null;
+
+    int[][] subArray = new int[2*radius][2*radius];
+    if (subArray.length > arr.length || subArray[0].length >arr[0].length){
+      throw new IllegalArgumentException();
+    }
+    int count = 0;
+    for (int y = centerCol-radius, i=0; y <centerCol+radius; y++, i++){
+      for (int x = centerRow-radius, j=0; x < centerRow+radius; x++, j++){
+        //If the value we are looking at is greater than the width of the array, grab the value from the start of the array
+        //ex: arr[5][5] and we are looking at [5][6] then it looks at [5][1]
+        if (wrapped && x> arr.length){
+          int remain = Math.abs(arr.length - x);
+          subArray[i][j] = arr[i][remain];
+        }
+
+        subArray[i][j] = arr[y][x];
+
+      }
+
+    }
+
+    return subArray;
   }
 }
