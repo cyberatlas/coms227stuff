@@ -113,14 +113,20 @@ public class GridUtil
       for (int x = centerRow-radius, j=0; x < centerRow+radius; x++, j++){
         //If the value we are looking at is greater than the width of the array, grab the value from the start of the array
         //ex: arr[5][5] and we are looking at [5][6] then it looks at [5][1]
-        if (wrapped && x> arr.length){
-          int remain = Math.abs(arr.length - x);
+        //doesnt work on negatives
+        if (wrapped && (x> arr.length || x< 0)) {
+          int remain = x>0 ? (Math.abs(arr.length-1 - x))-1 : arr.length+Math.abs(x);
           subArray[i][j] = arr[i][remain];
         }
 
         subArray[i][j] = arr[y][x];
-
+//doesnt work on negatives
+        if (wrapped && y> arr.length){
+          int remain = Math.abs(arr.length-1 - y);
+          subArray[i][j] = arr[remain-1][j];
+        }
       }
+
 
     }
 
