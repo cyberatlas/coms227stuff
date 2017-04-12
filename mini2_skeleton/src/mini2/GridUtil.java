@@ -104,10 +104,11 @@ public class GridUtil
   {
     // TODO
 
+    //Throws an exception if the sub array is larger than the initial array
 	  if (2*radius+1> arr.length || 2*radius+1 >arr[0].length){
 	      throw new IllegalArgumentException();
 	    }
-	  
+    //initializes the subarray to 2* radius +1 length and width. Plus 1 accounts for the center element and *2 is to create the full array not just half
     int[][] subArray = new int[2*radius+1][2*radius+1];
    //if (radius> arr.length || radius >arr[0].length){
     
@@ -116,6 +117,8 @@ public class GridUtil
     {
       for(int j = 0; j < 2*radius+1; ++j)
       {
+       //center -radius is how far across you need to go
+        //iterating adding j allows you to 
         int row = centerRow-radius+i;
         int col = centerCol-radius+j;
         if(wrapped)

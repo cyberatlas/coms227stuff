@@ -48,7 +48,7 @@ public class ConwayTransform implements ITransform
     //checks the rules listed above
     if(s<2 || s>3){
       returnVal = 0;
-    }else if(elements[elements.length/2][elements[0].length/2] == 1 && (s==1 || s==3)) {
+    }else if(elements[elements.length/2][elements[0].length/2] == 1 && (s==2 || s==3)) {
       returnVal = 1;
     }
     else if(elements[elements.length/2][elements[0].length/2] == 0 && s==3){
