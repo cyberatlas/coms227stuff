@@ -104,13 +104,60 @@ public class GridUtil
   {
     // TODO
 
-    int[][] subArray = new int[2*radius][2*radius];
+    int[][] subArray = new int[2*radius+1][2*radius+1];
     if (subArray.length > arr.length || subArray[0].length >arr[0].length){
       throw new IllegalArgumentException();
     }
-    int count = 0;
-    for (int y = centerCol-radius, i=0; y <centerCol+radius; y++, i++){
-      for (int x = centerRow-radius, j=0; x < centerRow+radius; x++, j++){
+
+    for(int i = 0; i < 2*radius+1; ++i)
+    {
+      for(int j = 0; j < 2*radius+1; ++j)
+      {
+        int row = centerRow-radius+i;
+        int col = centerCol-radius+j;
+        if(wrapped)
+        {
+          if (row > arr.length-1){
+            subArray[i][j] = arr[row-arr.length][col];
+        }
+          else if (row < 0){
+            subArray[i][j] = arr[arr.length+row][col];
+          }
+          else if (col > arr[0].length-1){
+              subArray[i][j] = arr[row][col-arr.length];
+        }
+          else if (col < 0){
+            subArray[i][j] = arr[row][arr.length+col];
+          }
+          else{
+            subArray[i][j] = arr[row][col];
+          }
+        }
+        else
+        {
+          if (row<0 || col<0 || col>arr[0].length-1 || row>arr.length-1){
+            subArray[i][j] = 0;
+          }
+          else{
+            subArray[i][j] = arr[row][col];
+          }
+        }
+      }
+    }
+//    for (int y = centerCol-radius; y <= centerCol+radius;y++){
+//      for (int x = centerRow-radius; x<= centerRow+radius; x++){
+//        for (int i =0; i < 2*radius+1; i++){
+//          for (int j=0; j<2*radius+1;j++){
+//            subArray[i][j] = arr[x][y];
+//          }
+//        }
+//
+//      }
+//    }
+   // int count = 0;
+    /*
+    for (int y = centerCol-radius, i=0; y <= centerCol+radius; y++, i++){
+      for (int x = centerRow-radius, j=0; x <= centerRow+radius; x++, j++){
         //If the value we are looking at is greater than the width of the array, grab the value from the start of the array
         //ex: arr[5][5] and we are looking at [5][6] then it looks at [5][1]
         //doesnt work on negatives
@@ -120,7 +167,7 @@ public class GridUtil
         }
         else if (wrapped && y<0){
           int remain = arr.length + y;
-          subArray[i][y] = arr[remain][j];
+          subArray[i][j] = arr[remain][j];
         }
         subArray[i][j] = arr[y][x];
 //doesnt work on negatives
@@ -130,12 +177,12 @@ public class GridUtil
         }
         else if (wrapped && y<0){
           int remain = arr.length + y;
-          subArray[i][y] = arr[i][remain];
+          subArray[i][j] = arr[i][remain];
         }
       }
 
 
-    }
+    }*/
 
     return subArray;
   }
