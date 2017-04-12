@@ -104,10 +104,13 @@ public class GridUtil
   {
     // TODO
 
+	  if (2*radius+1> arr.length || 2*radius+1 >arr[0].length){
+	      throw new IllegalArgumentException();
+	    }
+	  
     int[][] subArray = new int[2*radius+1][2*radius+1];
-    if (subArray.length > arr.length || subArray[0].length >arr[0].length){
-      throw new IllegalArgumentException();
-    }
+   //if (radius> arr.length || radius >arr[0].length){
+    
 
     for(int i = 0; i < 2*radius+1; ++i)
     {
@@ -118,31 +121,31 @@ public class GridUtil
         if(wrapped)
         {
           if (row > arr.length-1){
-            subArray[i][j] = arr[row-arr.length][col];
+            row =row -arr.length;
         }
-          else if (row < 0){
-            subArray[i][j] = arr[arr.length+row][col];
+          if (row < 0){
+            row = arr.length+row;
           }
-          else if (col > arr[0].length-1){
-              subArray[i][j] = arr[row][col-arr.length];
+          if (col > arr[0].length-1){
+              col = col-arr[0].length;
         }
-          else if (col < 0){
-            subArray[i][j] = arr[row][arr.length+col];
+          if (col < 0){
+            col = arr[0].length+col;
           }
-          else{
+          
             subArray[i][j] = arr[row][col];
-          }
+          
         }
         else
         {
           if (row<0 || col<0 || col>arr[0].length-1 || row>arr.length-1){
             subArray[i][j] = 0;
-          }
-          else{
+          }else{
+         
             subArray[i][j] = arr[row][col];
-          }
-        }
+           }
       }
+    }
     }
 //    for (int y = centerCol-radius; y <= centerCol+radius;y++){
 //      for (int x = centerRow-radius; x<= centerRow+radius; x++){

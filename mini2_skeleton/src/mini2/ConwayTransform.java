@@ -30,6 +30,10 @@ public class ConwayTransform implements ITransform
     //adds all the values of the subarray except for the center point
     //s is the variable for the sum, returnVal is the variable for the value to be returned
 
+	  if (2 * getRadius()+1 != elements.length || 2*getRadius()+1 != elements[0].length){
+	      throw new IllegalArgumentException();
+	    }
+	  
     int s = 0;
     int returnVal = 0;
     for (int i =0; i < elements.length; i++){
@@ -42,16 +46,17 @@ public class ConwayTransform implements ITransform
       }
     }
     //checks the rules listed above
-    if(s<2){
+    if(s<2 || s>3){
       returnVal = 0;
-    }else if(elements[1][1] == 1 && (s==1 || s==3)) {
+    }else if(elements[elements.length/2][elements[0].length/2] == 1 && (s==1 || s==3)) {
       returnVal = 1;
     }
-    else if (s>3){
-      returnVal = 0;
-    }
-    else if(elements[1][1] == 0 && s==3){
+    else if(elements[elements.length/2][elements[0].length/2] == 0 && s==3){
       returnVal =1;
+    }
+    else
+    {
+    	returnVal = 0;
     }
     return returnVal;
   }

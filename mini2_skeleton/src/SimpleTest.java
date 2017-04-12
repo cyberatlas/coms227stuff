@@ -20,7 +20,7 @@ public class SimpleTest
       }
     }
     
-    int[][] sub = GridUtil.getSubArray(test, 3, 6, 1, true);
+    int[][] sub = GridUtil.getSubArray(test, 1, 1, 2, true);
     GridUtil.printArray(sub);   
   }
 }

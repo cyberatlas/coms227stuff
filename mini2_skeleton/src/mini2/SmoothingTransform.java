@@ -25,8 +25,15 @@ public class SmoothingTransform implements ITransform
   public int apply(int[][] elements)
   {
     // TODO
-   // num of
-    return 0;
+    int sum =0;
+    int count = 0;
+    for (int i =0; i < elements.length; i  ++){
+      for (int j = 0; j<elements[0].length; j++){
+        sum += elements[i][j];
+        count +=1;
+      }
+    }
+    return sum/count;
   }
 
   @Override
