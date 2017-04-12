@@ -125,6 +125,9 @@ public class GridUtil
           int remain = Math.abs(arr.length-1 - y);
           subArray[i][j] = arr[remain-1][j];
         }
+        else if (wrapped && y<0){
+          int remain = Math.abs(/)
+        }
       }
 
 
