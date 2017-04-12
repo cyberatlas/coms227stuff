@@ -117,8 +117,7 @@ public class GridUtil
     {
       for(int j = 0; j < 2*radius+1; ++j)
       {
-       //center -radius is how far across you need to go
-        //iterating adding j allows you to 
+       //changes the value of the row to centerRow -radius and then we add the value of j. This allows us to check the value fo 77
         int row = centerRow-radius+i;
         int col = centerCol-radius+j;
         if(wrapped)
@@ -154,7 +153,7 @@ public class GridUtil
 //      for (int x = centerRow-radius; x<= centerRow+radius; x++){
 //        for (int i =0; i < 2*radius+1; i++){
 //          for (int j=0; j<2*radius+1;j++){
-//            subArray[i][j] = arr[x][y];
+//            subArray[i][j] = arr[x][y];/
 //          }
 //        }
 //

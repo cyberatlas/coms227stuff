@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/mini2/GridUtil.java" line="183" />
+    <bookmark url="file://$PROJECT_DIR$/src/mini2/GridUtil.java" line="182" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec0cb829-fb35-411f-839e-84b0d34b86e1" name="Default" comment="" />
@@ -22,8 +22,8 @@
       <file leaf-file-name="GridUtil.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mini2/GridUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="120" column="43" lean-forward="false" selection-start-line="120" selection-start-column="43" selection-end-line="120" selection-end-column="43" />
+            <state relative-caret-position="352">
+              <caret line="155" column="42" lean-forward="false" selection-start-line="155" selection-start-column="42" selection-end-line="155" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,7 +46,14 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="814">
               <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="e#557#558#0" expanded="false" />
+                <element signature="e#587#588#0" expanded="false" />
+                <element signature="e#920#921#0" expanded="false" />
+                <element signature="e#943#944#0" expanded="false" />
+                <element signature="e#989#990#0" expanded="false" />
+                <element signature="e#1011#1012#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -465,7 +472,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="814">
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#557#558#0" expanded="false" />
+            <element signature="e#587#588#0" expanded="false" />
+            <element signature="e#920#921#0" expanded="false" />
+            <element signature="e#943#944#0" expanded="false" />
+            <element signature="e#989#990#0" expanded="false" />
+            <element signature="e#1011#1012#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -491,7 +505,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
           <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#557#558#0" expanded="false" />
+            <element signature="e#587#588#0" expanded="false" />
+            <element signature="e#920#921#0" expanded="false" />
+            <element signature="e#943#944#0" expanded="false" />
+            <element signature="e#989#990#0" expanded="false" />
+            <element signature="e#1011#1012#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -525,7 +546,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="e#557#558#0" expanded="false" />
+            <element signature="e#587#588#0" expanded="false" />
+            <element signature="e#920#921#0" expanded="false" />
+            <element signature="e#943#944#0" expanded="false" />
+            <element signature="e#989#990#0" expanded="false" />
+            <element signature="e#1011#1012#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -559,7 +587,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="e#557#558#0" expanded="false" />
+            <element signature="e#587#588#0" expanded="false" />
+            <element signature="e#920#921#0" expanded="false" />
+            <element signature="e#943#944#0" expanded="false" />
+            <element signature="e#989#990#0" expanded="false" />
+            <element signature="e#1011#1012#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -603,7 +638,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="814">
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#557#558#0" expanded="false" />
+            <element signature="e#587#588#0" expanded="false" />
+            <element signature="e#920#921#0" expanded="false" />
+            <element signature="e#943#944#0" expanded="false" />
+            <element signature="e#989#990#0" expanded="false" />
+            <element signature="e#1011#1012#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -617,8 +659,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mini2/GridUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="120" column="43" lean-forward="false" selection-start-line="120" selection-start-column="43" selection-end-line="120" selection-end-column="43" />
+        <state relative-caret-position="352">
+          <caret line="155" column="42" lean-forward="false" selection-start-line="155" selection-start-column="42" selection-end-line="155" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
