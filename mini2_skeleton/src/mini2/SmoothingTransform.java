@@ -25,6 +25,7 @@ public class SmoothingTransform implements ITransform
   public int apply(int[][] elements)
   {
     // TODO
+   // num of
     return 0;
   }
 

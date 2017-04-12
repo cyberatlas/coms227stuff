@@ -114,19 +114,23 @@ public class GridUtil
         //If the value we are looking at is greater than the width of the array, grab the value from the start of the array
         //ex: arr[5][5] and we are looking at [5][6] then it looks at [5][1]
         //doesnt work on negatives
-        if (wrapped && (x> arr.length || x< 0)) {
-          int remain = x>0 ? (Math.abs(arr.length-1 - x))-1 : arr.length+Math.abs(x);
-          subArray[i][j] = arr[i][remain];
+        if (wrapped && x> arr.length){
+          int remain = Math.abs(arr.length-1 - x);
+          subArray[i][j] = arr[remain-1][j];
         }
-
+        else if (wrapped && y<0){
+          int remain = arr.length + y;
+          subArray[i][y] = arr[remain][j];
+        }
         subArray[i][j] = arr[y][x];
 //doesnt work on negatives
         if (wrapped && y> arr.length){
           int remain = Math.abs(arr.length-1 - y);
-          subArray[i][j] = arr[remain-1][j];
+          subArray[i][j] = arr[i][remain-1];
         }
         else if (wrapped && y<0){
-          int remain = Math.abs(/)
+          int remain = arr.length + y;
+          subArray[i][y] = arr[i][remain];
         }
       }
 

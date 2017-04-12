@@ -27,7 +27,33 @@ public class ConwayTransform implements ITransform
   public int apply(int[][] elements)
   {
     // TODO
-    return 0;
+    //adds all the values of the subarray except for the center point
+    //s is the variable for the sum, returnVal is the variable for the value to be returned
+
+    int s = 0;
+    int returnVal = 0;
+    for (int i =0; i < elements.length; i++){
+      for (int j =0; j< elements[0].length; j++){
+        //checks to make sure it is not at the center point so that it is not used in the sum
+        if (!(i==1 && j==1)){
+          //adds the current value of the array to the sum
+          s += elements[i][j];
+        }
+      }
+    }
+    //checks the rules listed above
+    if(s<2){
+      returnVal = 0;
+    }else if(elements[1][1] == 1 && (s==1 || s==3)) {
+      returnVal = 1;
+    }
+    else if (s>3){
+      returnVal = 0;
+    }
+    else if(elements[1][1] == 0 && s==3){
+      returnVal =1;
+    }
+    return returnVal;
   }
 
   @Override
