@@ -20,7 +20,7 @@ public class GroupPhoto extends JFrame {
 	public static void main(String[] args) {
 		final ArrayList<Portrait> portraits = new ArrayList<Portrait>();
 		// Chris Johnson's self-portrait
-		//portraits.add(new Portrait0CRJ());
+		portraits.add(new Portrait8ADS());
 
 		// Replace these constructor calls with calls to constructors
 		// for other students' code you download from Piazza
