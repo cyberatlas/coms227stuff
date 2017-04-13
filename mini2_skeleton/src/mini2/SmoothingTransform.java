@@ -24,7 +24,7 @@ public class SmoothingTransform implements ITransform
   @Override
   public int apply(int[][] elements)
   {
-    // TODO
+    // Iterates through the array, keeping track of the number of elements nad the sum of all the elements, returns the  avage of them all (sum/count)
     int sum =0;
     int count = 0;
     for (int i =0; i < elements.length; i  ++){

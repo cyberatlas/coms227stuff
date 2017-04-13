@@ -117,9 +117,11 @@ public class GridUtil
     {
       for(int j = 0; j < 2*radius+1; ++j)
       {
-       //changes the value of the row to centerRow -radius and then we add the value of j. This allows us to check the value fo 77
+       //changes the value of the row to centerRow -radius and then we add the value of j. This allows us to ge the value of each element and copy the value into the subarray.
         int row = centerRow-radius+i;
         int col = centerCol-radius+j;
+        //if wrapped is true and the row/column less then 1 it goes to the other sides
+        //If the value is greater than the original size fo the array, then grab the value from the start of the array
         if(wrapped)
         {
           if (row > arr.length-1){
@@ -140,6 +142,7 @@ public class GridUtil
         }
         else
         {
+          //if wrapping is off and the value is ouside the eleents of the array, fill in with 0
           if (row<0 || col<0 || col>arr[0].length-1 || row>arr.length-1){
             subArray[i][j] = 0;
           }else{
@@ -149,45 +152,18 @@ public class GridUtil
       }
     }
     }
-//    for (int y = centerCol-radius; y <= centerCol+radius;y++){
-//      for (int x = centerRow-radius; x<= centerRow+radius; x++){
-//        for (int i =0; i < 2*radius+1; i++){
-//          for (int j=0; j<2*radius+1;j++){
-//            subArray[i][j] = arr[x][y];/
-//          }
-//        }
-//
-//      }
-//    }
-   // int count = 0;
-    /*
-    for (int y = centerCol-radius, i=0; y <= centerCol+radius; y++, i++){
-      for (int x = centerRow-radius, j=0; x <= centerRow+radius; x++, j++){
-        //If the value we are looking at is greater than the width of the array, grab the value from the start of the array
-        //ex: arr[5][5] and we are looking at [5][6] then it looks at [5][1]
-        //doesnt work on negatives
-        if (wrapped && x> arr.length){
-          int remain = Math.abs(arr.length-1 - x);
-          subArray[i][j] = arr[remain-1][j];
-        }
-        else if (wrapped && y<0){
-          int remain = arr.length + y;
-          subArray[i][j] = arr[remain][j];
-        }
-        subArray[i][j] = arr[y][x];
-//doesnt work on negatives
-        if (wrapped && y> arr.length){
-          int remain = Math.abs(arr.length-1 - y);
-          subArray[i][j] = arr[i][remain-1];
-        }
-        else if (wrapped && y<0){
-          int remain = arr.length + y;
-          subArray[i][j] = arr[i][remain];
-        }
-      }
 
 
-    }*/
+
+
+
+
+
+
+
+
+
+
 
     return subArray;
   }

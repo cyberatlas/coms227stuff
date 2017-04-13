@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/mini2/GridUtil.java" line="182" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="ec0cb829-fb35-411f-839e-84b0d34b86e1" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -22,8 +19,8 @@
       <file leaf-file-name="GridUtil.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mini2/GridUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="155" column="42" lean-forward="false" selection-start-line="155" selection-start-column="42" selection-end-line="155" selection-end-column="42" />
+            <state relative-caret-position="768">
+              <caret line="166" column="0" lean-forward="false" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -34,7 +31,7 @@
       <file leaf-file-name="ConwayTransform.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mini2/ConwayTransform.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-22">
+            <state relative-caret-position="-88">
               <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
               <folding />
             </state>
@@ -44,16 +41,9 @@
       <file leaf-file-name="SmoothingTransform.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mini2/SmoothingTransform.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="814">
-              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-              <folding>
-                <element signature="e#557#558#0" expanded="false" />
-                <element signature="e#587#588#0" expanded="false" />
-                <element signature="e#920#921#0" expanded="false" />
-                <element signature="e#943#944#0" expanded="false" />
-                <element signature="e#989#990#0" expanded="false" />
-                <element signature="e#1011#1012#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="506">
+              <caret line="26" column="150" lean-forward="false" selection-start-line="26" selection-start-column="150" selection-end-line="26" selection-end-column="150" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,9 +59,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/mini2/ConwayTransform.java" />
-        <option value="$PROJECT_DIR$/src/mini2/SmoothingTransform.java" />
         <option value="$PROJECT_DIR$/src/SimpleTest.java" />
         <option value="$PROJECT_DIR$/src/mini2/GridUtil.java" />
+        <option value="$PROJECT_DIR$/src/mini2/SmoothingTransform.java" />
       </list>
     </option>
   </component>
@@ -96,9 +86,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -406,7 +396,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -472,14 +462,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="814">
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mini2/GridUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#557#558#0" expanded="false" />
-            <element signature="e#587#588#0" expanded="false" />
-            <element signature="e#920#921#0" expanded="false" />
-            <element signature="e#943#944#0" expanded="false" />
-            <element signature="e#989#990#0" expanded="false" />
-            <element signature="e#1011#1012#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mini2/ConwayTransform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mini2/SmoothingTransform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -505,14 +514,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
           <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="e#557#558#0" expanded="false" />
-            <element signature="e#587#588#0" expanded="false" />
-            <element signature="e#920#921#0" expanded="false" />
-            <element signature="e#943#944#0" expanded="false" />
-            <element signature="e#989#990#0" expanded="false" />
-            <element signature="e#1011#1012#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -546,14 +548,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="e#557#558#0" expanded="false" />
-            <element signature="e#587#588#0" expanded="false" />
-            <element signature="e#920#921#0" expanded="false" />
-            <element signature="e#943#944#0" expanded="false" />
-            <element signature="e#989#990#0" expanded="false" />
-            <element signature="e#1011#1012#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -587,14 +582,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="e#557#558#0" expanded="false" />
-            <element signature="e#587#588#0" expanded="false" />
-            <element signature="e#920#921#0" expanded="false" />
-            <element signature="e#943#944#0" expanded="false" />
-            <element signature="e#989#990#0" expanded="false" />
-            <element signature="e#1011#1012#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -636,22 +624,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mini2/SmoothingTransform.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="e#557#558#0" expanded="false" />
-            <element signature="e#587#588#0" expanded="false" />
-            <element signature="e#920#921#0" expanded="false" />
-            <element signature="e#943#944#0" expanded="false" />
-            <element signature="e#989#990#0" expanded="false" />
-            <element signature="e#1011#1012#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="506">
+          <caret line="26" column="150" lean-forward="false" selection-start-line="26" selection-start-column="150" selection-end-line="26" selection-end-column="150" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mini2/ConwayTransform.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
+        <state relative-caret-position="-88">
           <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
           <folding />
         </state>
@@ -659,8 +640,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mini2/GridUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="155" column="42" lean-forward="false" selection-start-line="155" selection-start-column="42" selection-end-line="155" selection-end-column="42" />
+        <state relative-caret-position="768">
+          <caret line="166" column="0" lean-forward="false" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
