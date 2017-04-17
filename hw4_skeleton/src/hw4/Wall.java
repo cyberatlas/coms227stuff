@@ -1,24 +1,36 @@
 package hw4;
 
-import graph.Cell;
+        import graph.Cell;
+        import state.State;
 
-import java.awt.*;
+        import java.awt.*;
 
 /**
  * Created by Ruski on 4/14/2017.
  */
-public class Wall {
+public class Wall implements State {
     public Wall() {
 
-        /**
-         * TODO return the wall color as white
-         */
-        public static Color getColor(){
-            return Color;
-        }
-        public static void handle(Cell cell){
-        //TODO
-       }
-    
+
+}
+
+    @Override
+    public void handle(Cell cell) {
+
+    }
+
+    @Override
+    public Color getColor() {
+        return null;
+    }
+
+    @Override
+    public boolean isPassable() {
+        return false;
+    }
+
+    @Override
+    public char toChar() {
+        return 0;
     }
 }
