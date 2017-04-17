@@ -20,9 +20,13 @@ public class Food implements State {
 		return null;
 	}
 
+	/**
+	 * Checks to see if the snake can go through the cell
+	 * @return true because "snakes can mow through food"
+	 */
 	@Override
 	public boolean isPassable() {
-		return false;
+		return true;
 	}
 
 	@Override

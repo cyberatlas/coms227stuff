@@ -9,6 +9,8 @@ import java.awt.*;
  * Created by ruski on 4/16/2017.
  */
 public class SquareMap extends GraphMap {
+	public SquareMap(){}
+
 	@Override
 	public int getPixelWidth() {
 		return 0;
