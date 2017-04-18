@@ -9,7 +9,8 @@ import java.awt.*;
  * Created by ruski on 4/16/2017.
  */
 public class Food implements State {
-	public Food(){}
+	//public Food(){}
+
 	@Override
 	public void handle(Cell cell) {
 
@@ -17,6 +18,7 @@ public class Food implements State {
 
 	@Override
 	public Color getColor() {
+		//TODO needs to return food color which is implemented in config
 		return null;
 	}
 
@@ -29,8 +31,12 @@ public class Food implements State {
 		return true;
 	}
 
+	/**
+	 * Returns the character representation of food
+	 * @return 'F'
+	 */
 	@Override
 	public char toChar() {
-		return 0;
+		return 'F';
 	}
 }

@@ -20,18 +20,32 @@ public class SnakeHead implements State, Snake {
 
 	}
 
+
+	/**
+	 * Returns the color of the snakehead
+	 * @return the color object with the random color I made up
+	 */
 	@Override
 	public Color getColor() {
-		return null;
+		Color snakeHeadColor = new Color(.42f,.42f,.42f);
+		return snakeHeadColor;
 	}
 
+	/**
+	 * Checks to if the snakehead can pass through itself
+	 * @return false
+	 */
 	@Override
 	public boolean isPassable() {
 		return false;
 	}
 
+	/**
+	 * Return the character representation of a snakehead
+	 * @return 'S'
+	 */
 	@Override
 	public char toChar() {
-		return 0;
+		return 'S';
 	}
 }
