@@ -4,6 +4,7 @@ import graph.Cell;
 import graph.GraphMap;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 /**
  * Created by ruski on 4/16/2017.
@@ -26,6 +27,7 @@ public class SquareMap extends GraphMap {
 	@Override
 	public Cell[] createNeighbors(int col, int row) {
 		//create arr of cells
+		ArrayList<Cell> cellList = ArrayList<>();
 		//populate with adjacent cells
 		//watch out for map edges
 		return new Cell[0];
