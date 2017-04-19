@@ -9,7 +9,7 @@ import java.awt.*;
  * Created by ruski on 4/16/2017.
  */
 public class Food implements State {
-	//public Food(){}
+	public Food(){}
 
 	@Override
 	public void handle(Cell cell) {

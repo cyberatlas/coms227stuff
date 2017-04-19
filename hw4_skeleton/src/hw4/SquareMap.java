@@ -9,20 +9,25 @@ import java.awt.*;
  * Created by ruski on 4/16/2017.
  */
 public class SquareMap extends GraphMap {
+
+
 	public SquareMap(){}
 
 	@Override
 	public int getPixelWidth() {
-		return 0;
+		return getCells()[0].length *getDistance();
 	}
 
 	@Override
 	public int getPixelHeight() {
-		return 0;
+		return getCells().length * getDistance();
 	}
 
 	@Override
 	public Cell[] createNeighbors(int col, int row) {
+		//create arr of cells
+		//populate with adjacent cells
+		//watch out for map edges
 		return new Cell[0];
 	}
 
