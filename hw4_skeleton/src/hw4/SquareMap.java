@@ -16,7 +16,8 @@ public class SquareMap extends GraphMap {
 
 	@Override
 	public int getPixelWidth() {
-		return getCells()[0].length *getDistance();
+		//multiplies the number of values by pixel length
+				return getCells()[0].length *getDistance();
 	}
 
 	@Override
@@ -26,20 +27,42 @@ public class SquareMap extends GraphMap {
 
 	@Override
 	public Cell[] createNeighbors(int col, int row) {
-		//create arr of cells
-		//ArrayList<Cell> cellList = ArrayList<>();
+		//create arr of cells		
 		//populate with adjacent cells
 		//watch out for map edges
-		return new Cell[0];
+		
+		//Creates an ArrayList of Cells that will hold the cell objects
+		ArrayList<Cell> neighbors = new ArrayList<Cell>();
+		//Checks that it has cells above it, if it does add the Cell above it to neighbors
+		if (row>0){
+			neighbors.add(getCells()[row-1][col]);
+		}
+		//If the row is less than the number of rows (minus 1 to account for the 0 index), then get the value from the Cell from the next row
+		if (row< getCells()[0].length-1){
+			neighbors.add(getCells()[row+1][col]);
+		}
+		//If there are cells to the left of it, add the cell to the left to neighbors
+		if (col>0){
+			neighbors.add(getCells()[row][col-1]);
+		}
+		//if there are cells to the right of it add the cell to the right
+		if (col<getCells().length-1){
+			neighbors.add(getCells()[row][col+1]);
+		}
+		
+		//return the neighbors arrayList to a Cell array with the same number of items as in the arraylist
+		return neighbors.toArray(new Cell[neighbors.size()]);
 	}
 
 	@Override
 	protected Point selectClosestIndex(int x, int y) {
+		//TODO
 		return null;
 	}
 
 	@Override
 	public Polygon createPolygon(int col, int row) {
+		//TODO
 		return null;
 	}
 }
