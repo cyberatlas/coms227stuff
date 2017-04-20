@@ -27,7 +27,7 @@ public class SquareMap extends GraphMap {
 	@Override
 	public Cell[] createNeighbors(int col, int row) {
 		//create arr of cells
-		ArrayList<Cell> cellList = ArrayList<>();
+		//ArrayList<Cell> cellList = ArrayList<>();
 		//populate with adjacent cells
 		//watch out for map edges
 		return new Cell[0];
