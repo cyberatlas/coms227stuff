@@ -13,6 +13,13 @@ public class Food implements State {
 
 	@Override
 	public void handle(Cell cell) {
+		//TODO
+		if (cell.getState()  instanceof SnakeHead){
+			//+1 to snake length and make the Cell a snakehead
+			length +=1;
+			this.cell.setState(SnakeHead);
+		}
+
 
 	}
 
