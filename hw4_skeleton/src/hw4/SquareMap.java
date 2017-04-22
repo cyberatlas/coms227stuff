@@ -24,13 +24,12 @@ public class SquareMap extends GraphMap {
 	public int getPixelHeight() {
 		return getCells().length * getDistance();
 	}
+	//create arr of cells
+	//populate with adjacent cells
+	//watch out for map edges
 
 	@Override
 	public Cell[] createNeighbors(int col, int row) {
-		//create arr of cells		
-		//populate with adjacent cells
-		//watch out for map edges
-		
 		//Creates an ArrayList of Cells that will hold the cell objects
 		ArrayList<Cell> neighbors = new ArrayList<Cell>();
 		//Checks that it has cells above it, if it does add the Cell above it to neighbors
@@ -58,13 +57,18 @@ public class SquareMap extends GraphMap {
 	protected Point selectClosestIndex(int x, int y) {
 		//TODO
 		//dont think that works??
-		x -= getDistance()/2;
-		return null;
+		int xIndex = x/getDistance();
+		int yIndex = y/getDistance();
+		return new Point(xIndex, yIndex);
 	}
 
 	@Override
 	public Polygon createPolygon(int col, int row) {
 		//TODO
-		return null;
+		//value +/- distance
+		//create new arrays to hold the points
+		int[] xCoor  = {(int) getDistance()+ col, (int) getDistance() -col };
+		int[] yCoor = {(int) getDistance()+row, (int) getDistance()-row};
+		return new Polygon(xCoor, yCoor, 2);
 	}
 }
