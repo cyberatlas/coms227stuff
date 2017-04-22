@@ -352,7 +352,7 @@ public abstract class GraphMap implements Updatable, Iterable<Cell> {
 	public abstract int getPixelWidth();
 
 	/**
-	 * Gets the height of the window in pixels for rendering,
+	 * Gets the height of the window in pix els for rendering,
 	 * including the border area.
 	 * @return The height in pixels
 	 */

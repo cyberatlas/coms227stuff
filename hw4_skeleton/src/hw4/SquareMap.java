@@ -57,6 +57,8 @@ public class SquareMap extends GraphMap {
 	@Override
 	protected Point selectClosestIndex(int x, int y) {
 		//TODO
+		//dont think that works??
+		x -= getDistance()/2;
 		return null;
 	}
 
