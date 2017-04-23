@@ -18,7 +18,19 @@ public class CellUtil
    */
   public static void calculateMouseDistance(Cell cell, int distance)
   {
-    // TODO
+
+    if (cell.getState() == null||cell.getState().isPassable() == true ){
+    cell.setMouseDistance(distance);
+    }
+
+    if (distance > 0) {
+    for (Cell c : cell.getNeighbors()) {
+      if (c.getMouseDistance() > distance) {
+        calculateMouseDistance(c, distance - 1);
+      }
+    }
+  }
+
   }
 
 

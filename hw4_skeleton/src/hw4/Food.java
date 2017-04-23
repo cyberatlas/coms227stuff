@@ -5,27 +5,25 @@ import state.State;
 
 import java.awt.*;
 
+import static main.Config.MAX_FOOD_TIMER;
+
 /**
  * Created by ruski on 4/16/2017.
  */
 public class Food implements State {
+	private int counter =0;
+
 	public Food(){}
 
 	@Override
 	public void handle(Cell cell) {
-		//TODO
-		if (cell.getState()  instanceof SnakeHead){
-			//+1 to snake length and make the Cell a snakehead
-			length +=1;
-			this.cell.setState(SnakeHead);
-		}
-
-
+		counter= (MAX_FOOD_TIMER== counter)? 0: counter +1;
 	}
 
 	@Override
 	public Color getColor() {
 		//TODO needs to return food color which is implemented in config
+
 		return null;
 	}
 
