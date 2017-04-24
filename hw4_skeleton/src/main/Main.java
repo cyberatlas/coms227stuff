@@ -10,8 +10,11 @@ import javax.swing.SwingUtilities;
 
 import clock.Clock;
 
+import graph.Cell;
 import graph.GraphMap;
 import graph.GraphMapFactory;
+import hw4.DungeonessCrab;
+import state.State;
 
 /**
  * Loads and starts a custom snake game. One can use the "-d" option for debug mode.
@@ -50,7 +53,9 @@ import graph.GraphMapFactory;
  * @author Brian Nakayama
  *
  */
-public class Main {
+
+
+/**public class Main {
 
 	public static void main(String[] args) {
 		GraphMap map;
@@ -63,7 +68,7 @@ public class Main {
 		if (argSet.size() > 0){
 			map = new GraphMapFactory(argSet.iterator().next()).createGraphMap();
 		} else {
-			map = new GraphMapFactory("Default.txt").createGraphMap();
+			map = new GraphMapFactory("Snowflake.txt").createGraphMap();
 		}
 			
 		Runnable r = new Runnable() {
@@ -80,5 +85,36 @@ public class Main {
 		  }
 		};
 		SwingUtilities.invokeLater(r);
+	}
+}
+*/
+
+/**
+ * Steve's test for the dungeoness crab. Should return true null null true
+ */
+public class Main {
+	public static void main(String[] args) {
+		// Create a cell whose state is DungeonessCrab and
+		// give it an open neighbor.  Note the color and
+		// polygon won't be used, so we can leave them null
+		Cell c = new Cell(null, null);
+		State myCrab = new DungeonessCrab();
+		c.setState(myCrab);
+		Cell c2 = new Cell(null, null);
+		Cell[] neighbors = {c2};
+		c.setNeighbors(neighbors);
+
+		// check initial values
+		System.out.println(c.getState() == myCrab); // should be true
+		System.out.println(c2.getState());           // should be null
+
+		// do updates (calls handle())
+		for (int i = 0; i < Config.MAX_FOOD_TIMER; ++i) {
+			c.update();
+		}
+
+		// crab state should have moved to neighbor
+		System.out.println(c.getState()); // should be null
+		System.out.println(c2.getState() == myCrab); // should be true
 	}
 }
