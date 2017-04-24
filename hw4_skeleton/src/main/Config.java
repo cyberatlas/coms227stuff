@@ -38,7 +38,7 @@ public class Config {
 	 */
 	public static final Color[] SNAKE_COLORS;
 
-	/**
+	/**-
 	 * The default color generator to use if a configuration cannot load a generator.
 	 */
 	public static final Class<RandomGreenGenerator> DEFAULT_COLOR_GEN = RandomGreenGenerator.class;

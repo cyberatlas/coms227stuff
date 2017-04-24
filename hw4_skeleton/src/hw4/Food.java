@@ -5,26 +5,25 @@ import state.State;
 
 import java.awt.*;
 
+import static main.Config.FOOD_COLORS;
 import static main.Config.MAX_FOOD_TIMER;
 
 /**
  * Created by ruski on 4/16/2017.
  */
 public class Food implements State {
-	private int counter =0;
+	protected int counter =0;
 
 	public Food(){}
 
 	@Override
 	public void handle(Cell cell) {
-		counter= (MAX_FOOD_TIMER== counter)? 0: counter +1;
+		if(++counter == MAX_FOOD_TIMER) counter = 0;
 	}
 
 	@Override
 	public Color getColor() {
-		//TODO needs to return food color which is implemented in config
-
-		return null;
+		return FOOD_COLORS[counter];
 	}
 
 	/**

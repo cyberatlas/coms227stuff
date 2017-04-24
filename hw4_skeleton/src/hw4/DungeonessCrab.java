@@ -10,6 +10,10 @@ import java.awt.*;
  */
 public class DungeonessCrab extends Food{
 
+	public void handle(Cell cell){
+		if (counter == 0){
+			cell.moveState(cell.getRandomOpen());}
+	}
 	public char toChar(){
 		return 'D';
 	}
