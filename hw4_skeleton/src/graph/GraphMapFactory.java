@@ -89,6 +89,7 @@ public class GraphMapFactory {
 			} catch (Exception e) {
 				System.out.println("Unable to load GraphMap from config."
 						+ " Creating the default map with custom colors.");
+				e.printStackTrace();
 				map = Config.DEFAULT_GRAPH_MAP.newInstance();
 				map.setColorGenerator(gen);
 				map.initialize();

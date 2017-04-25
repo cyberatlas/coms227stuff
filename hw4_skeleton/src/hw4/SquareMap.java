@@ -17,12 +17,12 @@ public class SquareMap extends GraphMap {
 	@Override
 	public int getPixelWidth() {
 		//multiplies the number of values by pixel length
-				return getCells()[0].length *getDistance();
+				return getCells()[0].length *getDistance() + getDistance();
 	}
 
 	@Override
 	public int getPixelHeight() {
-		return getCells().length * getDistance();
+		return getCells().length * getDistance() + getDistance();
 	}
 	//create arr of cells
 	//populate with adjacent cells
@@ -37,7 +37,7 @@ public class SquareMap extends GraphMap {
 			neighbors.add(getCells()[row-1][col]);
 		}
 		//If the row is less than the number of rows (minus 1 to account for the 0 index), then get the value from the Cell from the next row
-		if (row< getCells()[0].length-1){
+		if (row< getCells().length-1){
 			neighbors.add(getCells()[row+1][col]);
 		}
 		//If there are cells to the left of it, add the cell to the left to neighbors
@@ -45,7 +45,7 @@ public class SquareMap extends GraphMap {
 			neighbors.add(getCells()[row][col-1]);
 		}
 		//if there are cells to the right of it add the cell to the right
-		if (col<getCells().length-1){
+		if (col<getCells()[0].length-1){
 			neighbors.add(getCells()[row][col+1]);
 		}
 		
@@ -56,9 +56,13 @@ public class SquareMap extends GraphMap {
 	@Override
 	protected Point selectClosestIndex(int x, int y) {
 		//TODO
-		//dont think that works??
-		int xIndex = x/getDistance();
-		int yIndex = y/getDistance();
+		//subtract the white space and divide by the pixel distance
+		
+		int xIndex = (x-getDistance()/2)/getDistance();
+		if(xIndex > getCells().length-1){xIndex=getCells().length-1;}
+		int yIndex = (y-getDistance()/2)/getDistance();
+		if(yIndex > getCells()[0].length-1){yIndex=getCells()[0].length-1;}
+
 		return new Point(xIndex, yIndex);
 	}
 
@@ -67,8 +71,34 @@ public class SquareMap extends GraphMap {
 		//TODO
 		//value +/- distance
 		//create new arrays to hold the points
-		int[] xCoor  = {(int) getDistance()+ col, (int) getDistance() -col };
+		int[] xCoor = new int[4];
+		int[]  yCoor = new int[4];
+		for(int i=0; i<4; i++){
+			int coor = col* getDistance() + getDistance()/2;
+			if(i==0 || i == 3){
+				xCoor[i] = coor;
+				}
+			else if (i==1){
+				xCoor[i] = coor + getDistance();
+			}
+			else if (i==2){
+				xCoor[i] = coor + getDistance();
+			}
+			}
+		for(int i=0; i<4; i++){
+			int coor = row* getDistance() + getDistance()/2;
+			if(i==0 || i == 1){yCoor[i] = coor;}
+			if (i==2){yCoor[i] = coor + getDistance();}
+			if (i ==3){yCoor[i] = coor+getDistance();} 
+			}
+		
+		/*int[] xCoor  = {
+				(int) col * getDistance()+getDistance()/2,
+				(int) (col+1)* getDistance() +getDistance()/2,
+				(int) (col+1)*getDistance() +getDistance()/2,
+				(int) (col+1)};
 		int[] yCoor = {(int) getDistance()+row, (int) getDistance()-row};
-		return new Polygon(xCoor, yCoor, 2);
+		*/
+		return new Polygon(xCoor, yCoor, 4);
 	}
 }

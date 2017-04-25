@@ -13,7 +13,7 @@ public class RainbowColorGenerator implements ColorGenerator{
 	public Color createColor() {
 		//creates a new a random number generator that returns int 0-5
 		Random rand = new Random();
-		int numColor = rand.nextInt(5);
+		int numColor = rand.nextInt(6);
 		//defining the Color object that we will be using
 		Color randColor;
 		/**

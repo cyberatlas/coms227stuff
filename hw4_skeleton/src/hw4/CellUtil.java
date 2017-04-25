@@ -15,16 +15,16 @@ public class CellUtil {
 	 * @param distance the distance value to be set in the given cell
 	 */
 	public static void calculateMouseDistance(Cell cell, int distance) {
+		
+		if (distance <= 0) return;
 
 		if (cell.getState() == null || cell.getState().isPassable()) {
 			cell.setMouseDistance(distance);
 		}
 
-		if (distance > 0) {
-			for (Cell c : cell.getNeighbors()) {
-				if (c.getMouseDistance() < cell.getMouseDistance()) {
-					calculateMouseDistance(c, distance - 1);
-				}
+		for (Cell c : cell.getNeighbors()) {
+			if (c.getMouseDistance() < cell.getMouseDistance()) {
+				calculateMouseDistance(c, distance - 1);
 			}
 		}
 

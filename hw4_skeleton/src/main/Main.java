@@ -68,7 +68,7 @@ public class Main {
 		if (argSet.size() > 0){
 			map = new GraphMapFactory(argSet.iterator().next()).createGraphMap();
 		} else {
-			map = new GraphMapFactory("Arena.txt").createGraphMap();
+			map = new GraphMapFactory("Default.txt").createGraphMap();
 		}
 			
 		Runnable r = new Runnable() {

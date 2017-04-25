@@ -2,6 +2,7 @@ package hw4;
 
 import graph.Cell;
 import state.State;
+import static main.Config.MAX_FOOD_TIMER;
 
 import java.awt.*;
 
@@ -11,8 +12,13 @@ import java.awt.*;
 public class DungeonessCrab extends Food{
 
 	public void handle(Cell cell){
+		super.handle(cell);
 		if (counter == 0){
-			cell.moveState(cell.getRandomOpen());}
+			Cell openCell = cell.getRandomOpen();
+			if (openCell != null) {
+				cell.moveState(openCell);
+			}
+		}
 	}
 	public char toChar(){
 		return 'D';

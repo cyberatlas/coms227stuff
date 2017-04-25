@@ -1,4 +1,4 @@
-package Tests;
+package hw4;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -10,8 +10,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import graph.Cell;
-import hw4.DungeonessCrab;
-import hw4.Wall;
 import main.Config;
 
 public class DungeonessCrabTest
