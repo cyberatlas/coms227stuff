@@ -55,7 +55,7 @@ import state.State;
  */
 
 
-/**public class Main {
+public class Main {
 
 	public static void main(String[] args) {
 		GraphMap map;
@@ -68,7 +68,7 @@ import state.State;
 		if (argSet.size() > 0){
 			map = new GraphMapFactory(argSet.iterator().next()).createGraphMap();
 		} else {
-			map = new GraphMapFactory("Snowflake.txt").createGraphMap();
+			map = new GraphMapFactory("Arena.txt").createGraphMap();
 		}
 			
 		Runnable r = new Runnable() {
@@ -87,11 +87,12 @@ import state.State;
 		SwingUtilities.invokeLater(r);
 	}
 }
-*/
+
 
 /**
  * Steve's test for the dungeoness crab. Should return true null null true
  */
+/*
 public class Main {
 	public static void main(String[] args) {
 		// Create a cell whose state is DungeonessCrab and
@@ -118,3 +119,4 @@ public class Main {
 		System.out.println(c2.getState() == myCrab); // should be true
 	}
 }
+*/
