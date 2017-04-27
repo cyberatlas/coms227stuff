@@ -15,8 +15,9 @@ public class Food implements State {
 	/**
 	 * Counter that food and food objects use
 	 */
-	protected int counter = 0;
+	private int timer = 0;
 
+	protected int getTimer(){return timer;} 
 	public Food() {
 	}
 
@@ -28,8 +29,8 @@ public class Food implements State {
 	 */
 	@Override
 	public void handle(Cell cell) {
-		if (++counter == MAX_FOOD_TIMER)
-			counter = 0;
+		if (++timer == MAX_FOOD_TIMER)
+			timer = 0;
 	}
 
 	/**
@@ -39,7 +40,7 @@ public class Food implements State {
 	 */
 	@Override
 	public Color getColor() {
-		return FOOD_COLORS[counter];
+		return FOOD_COLORS[timer];
 	}
 
 	/**

@@ -23,7 +23,7 @@ public class DungeonessCrab extends Food {
 	@Override
 	public void handle(Cell cell) {
 		super.handle(cell);
-		if (counter == 0) {
+		if (getTimer() == 0) {
 			Cell openCell = cell.getRandomOpen();
 			if (openCell != null) {
 				cell.moveState(openCell);
