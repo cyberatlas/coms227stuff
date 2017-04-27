@@ -8,8 +8,8 @@ package clock;
  */
 public interface Updatable {
 
-    /**
-     * Called periodically.
-     */
-    public void update();
+	/**
+	 * Called periodically.
+	 */
+	public void update();
 }

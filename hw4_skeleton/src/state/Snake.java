@@ -6,10 +6,10 @@ package state;
  * @author Brian Nakayama
  */
 public interface Snake {
-    /**
-     * The current length in cells of the snake.
-     *
-     * @return The length in cells
-     */
-    public int getLength();
+	/**
+	 * The current length in cells of the snake.
+	 *
+	 * @return The length in cells
+	 */
+	public int getLength();
 }

@@ -11,31 +11,32 @@ import main.Config;
  * @author Brian Nakayama
  */
 public class RandomGreenGenerator implements ColorGenerator {
-    /**
-     * The base color (average color) to generate.
-     */
-    public static final Color COLOR_BASE = new Color(0.0f, 0.25f, 0.0f);
+	/**
+	 * The base color (average color) to generate.
+	 */
+	public static final Color COLOR_BASE = new Color(0.0f, 0.25f, 0.0f);
 
-    /**
-     * The number generator for creating colors.
-     */
-    private Random r = Config.RANDOM;
+	/**
+	 * The number generator for creating colors.
+	 */
+	private Random r = Config.RANDOM;
 
-    /*
-     * (non-Javadoc)
-     * @see color.ColorGenerator#getColor()
-     */
-    @Override
-    public Color createColor() {
-        int next = r.nextInt(3);
-        switch (next) {
-            case 0:
-                return COLOR_BASE;
-            case 1:
-                return COLOR_BASE.darker();
-            default:
-                return COLOR_BASE.brighter();
-        }
-    }
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see color.ColorGenerator#getColor()
+	 */
+	@Override
+	public Color createColor() {
+		int next = r.nextInt(3);
+		switch (next) {
+		case 0:
+			return COLOR_BASE;
+		case 1:
+			return COLOR_BASE.darker();
+		default:
+			return COLOR_BASE.brighter();
+		}
+	}
 
 }

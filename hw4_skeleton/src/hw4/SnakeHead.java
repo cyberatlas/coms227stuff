@@ -10,14 +10,21 @@ import java.awt.*;
 import static main.Config.MAX_SNAKE_TIMER;
 import static main.Config.endGame;
 
+
 /**
- * Created by ruski on 4/16/2017.
+ * The Logic of the snake
+ * @author Alex
+ *
  */
 public class SnakeHead implements State, Snake {
-
+	
     public int length = 4;
     private int timer = 0;
-
+    
+    /**
+     * Returns the length of the snake
+     * @return The length instance variable
+     */
     @Override
     public int getLength() {
         return length;

@@ -9,11 +9,11 @@ import java.awt.Color;
  * @see graph.GraphMap#initialize(String[] descriptor)
  */
 public interface ColorGenerator {
-    /**
-     * Makes a new color. For style, subclasses should create multiple colors.
-     *
-     * @return A Color
-     */
-    public Color createColor();
+	/**
+	 * Makes a new color. For style, subclasses should create multiple colors.
+	 *
+	 * @return A Color
+	 */
+	public Color createColor();
 
 }
